@@ -156,8 +156,7 @@ header {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    background-image:rgba(47, 48, 58, 0.4);
-    background-image: url(.././images/img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(.././images/img.jpg);
     background-position: center;
 }
 
@@ -372,7 +371,11 @@ header {
         margin-bottom: 30px;
     }
     
-    .portfolio-link:hover {
+    .portfolio-link {
+        display: block;
+    }
+    .portfolio-link:hover,
+    .portfolio-link:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
 
@@ -432,11 +435,11 @@ margin-right: 0px;
     
     .icon-block {
         display: flex;
+        justify-content: center;
+        align-items: center;
         
         margin-left: auto;
         margin-right: auto;
-        height: 44px;
-        width: 206px;
     }
     .list-link {
         margin-right: 10px;
@@ -451,12 +454,13 @@ margin-right: 0px;
     width: 44px;
     color: #AFB1B8;
     cursor: pointer;
+    border-radius: 50%;
     }
     .list-link:last-child {
     margin-right: 0px;
     }
-    .link-icon:hover {
-    border-radius: 50%;
+    .link-icon:hover,
+    .link-icon:focus {
     background-color: #2196F3;
     color: #FFFFFF;
     }
@@ -473,6 +477,11 @@ margin-right: 0px;
     /* contacts */
     .contacts-link {
         padding-left: 10px;
+    }
+    .contacts .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .contacts-icon {
         fill: currentColor;
@@ -512,7 +521,6 @@ margin-right: 0px;
     .clients-link:hover,
     .clients-link:focus {
     color: #2196F3;
-    border-radius: 4px;
     border: 1px solid #2196F3
     }
 
@@ -550,13 +558,13 @@ margin-right: 0px;
         align-items: center;
         height: 44px;
         width: 44px;
-        color: #AFB1B8;
+        color: #fff;
         cursor: pointer;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.1);
        }
-       .join-in-link:hover {
-        border-radius: 50%;
+       .join-in-link:hover,
+       .join-in-link:focus {
         background-color: #2196F3;
         color: #FFFFFF;
         }
